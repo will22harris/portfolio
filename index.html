@@ -146,17 +146,7 @@ a { color: inherit; text-decoration: none; }
 .hero-title-line {
   display: block;
 }
-.hero-title-line {
-  display: block;
-}
 .hero-title-line.indent { padding-left: 0.4em; }
-.hero-title-line.small {
-  font-size: 0.32em;
-  letter-spacing: 0.04em;
-  margin-top: 0.4em;
-  color: var(--cream-dim);
-  padding-left: 0.6em;
-}
 .hero-title em {
   font-style: normal;
   color: var(--accent);
@@ -617,6 +607,34 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 760px) {
   .image-grid.cols-3, .image-grid.cols-2 { grid-template-columns: 1fr; }
 }
+
+.modal-subsection {
+  margin-top: 56px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+.modal-subsection:first-of-type { margin-top: 0; }
+.modal-subsection-label {
+  font-family: var(--display);
+  font-size: 28px;
+  letter-spacing: 0.06em;
+  color: var(--cream);
+}
+.modal-subsection-meta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.modal-subsection-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  margin-left: 8px;
+}
 .image-tile {
   background: var(--bg-elev);
   border: 1px solid var(--line);
@@ -696,12 +714,13 @@ a { color: inherit; text-decoration: none; }
       <span>Will Harris · Austin, TX</span>
     </div>
     <h1 class="hero-title">
-  <span class="hero-title-line">Advertising</span>
-  <span class="hero-title-line small indent"><em>Sports Media</em> &amp; Business</span>
-</h1>
-  <p class="hero-tagline">
-  UT Austin <strong>Advertising</strong> major with a <strong>Sports Media</strong> minor and an <strong>Elements of Business</strong> certificate. I build branded content, social campaigns, and visual work where <strong>brand storytelling</strong> meets culture.
-</p>
+      <span class="hero-title-line">Advertising</span>
+      <span class="hero-title-line indent">&amp; Sports</span>
+      <span class="hero-title-line"><em>Media</em></span>
+    </h1>
+    <p class="hero-tagline">
+      UT Austin advertising student with a <strong>Sports Media</strong> focus and an eye for bold, culturally-driven creative. I build branded content, social campaigns, and visual work at the intersection of <strong>sports and culture</strong>.
+    </p>
     <div class="hero-ctas">
       <a href="#work" class="btn primary">View Work <span class="btn-arrow">→</span></a>
       <a href="#contact" class="btn">Get in Touch</a>
@@ -796,11 +815,11 @@ a { color: inherit; text-decoration: none; }
     <li class="project" data-modal="modal-photo">
       <span class="project-num">07</span>
       <div class="project-info">
-        <h3 class="project-title">Sports Photography</h3>
-        <div class="project-tags"><span>Photography</span><span>Sports</span><span>Live Action</span></div>
+        <h3 class="project-title">Photography</h3>
+        <div class="project-tags"><span>Photography</span><span>Client Work</span><span>Sports</span></div>
       </div>
       <div class="project-thumb">
-        <img src="images/Sport_pic_3.jpg" alt="Sports photography thumbnail" loading="lazy">
+        <img src="images/Wedding_1.jpg" alt="Photography thumbnail" loading="lazy">
       </div>
       <span class="project-arrow">→</span>
     </li>
@@ -852,8 +871,8 @@ a { color: inherit; text-decoration: none; }
     <a class="contact-email" href="mailto:will22harris@gmail.com">will22harris@gmail.com</a>
     <div class="contact-socials">
       <a href="https://instagram.com/willharriscreative" target="_blank" rel="noopener">Instagram</a>
-<a href="https://www.linkedin.com/in/willlharris/" target="_blank" rel="noopener">LinkedIn</a>
-<a href="mailto:will22harris@gmail.com">Send a Message</a>
+      <a href="https://www.linkedin.com/in/willlharris/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:will22harris@gmail.com">Send a Message</a>
     </div>
   </div>
 </section>
@@ -958,9 +977,35 @@ a { color: inherit; text-decoration: none; }
   <button class="modal-close" aria-label="Close">×</button>
   <div class="modal-inner">
     <div class="modal-meta">07 / Project</div>
-    <h2 class="modal-title">Sports Photography</h2>
-    <div class="modal-tags"><span>Photography</span><span>Sports</span><span>Live Action</span></div>
-    <p class="modal-desc">A selection of sports photography capturing live action and atmosphere — shot with an emphasis on timing, composition, and the raw energy of competition. Most of this work was made on the field at Texas softball, balancing tight player isolation with wider, mood-driven frames.</p>
+    <h2 class="modal-title">Photography</h2>
+    <div class="modal-tags"><span>Weddings</span><span>Events</span><span>Portraits</span><span>Sports</span></div>
+    <p class="modal-desc">A working photography portfolio split between paid client work and live sports coverage. Recent gigs include weddings, graduation portraits, and event coverage at a paleontology exhibit. The sports work below was shot on the field at Texas softball, focused on timing, composition, and the energy of live competition.</p>
+
+    <div class="modal-subsection">
+      <span class="modal-subsection-label">Client Work</span>
+      <span class="modal-subsection-meta">Weddings · Events · Portraits</span>
+      <span class="modal-subsection-rule"></span>
+    </div>
+    <div class="image-grid">
+      <div class="image-tile"><img src="images/Wedding_1.jpg" alt="Wedding photo 1" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_2.jpg" alt="Wedding photo 2" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_3.jpg" alt="Wedding photo 3" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_4.jpg" alt="Wedding photo 4" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_5.jpg" alt="Wedding photo 5" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_6.jpg" alt="Wedding photo 6" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Wedding_7.jpg" alt="Wedding photo 7" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Grad_1.jpg" alt="Graduation portrait 1" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Grad_4.jpg" alt="Graduation portrait 2" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Client_1.jpg" alt="Portrait shoot" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Exhibit_3.jpg" alt="Paleontology exhibit event 1" loading="lazy"></div>
+      <div class="image-tile"><img src="images/Exhibit_4.jpg" alt="Paleontology exhibit event 2" loading="lazy"></div>
+    </div>
+
+    <div class="modal-subsection">
+      <span class="modal-subsection-label">Sports</span>
+      <span class="modal-subsection-meta">Texas Softball · Live Action</span>
+      <span class="modal-subsection-rule"></span>
+    </div>
     <div class="image-grid">
       <div class="image-tile"><img src="images/Sport_pic_1.jpg" alt="Sports photo 1" loading="lazy"></div>
       <div class="image-tile"><img src="images/Sport_pic_2.jpg" alt="Sports photo 2" loading="lazy"></div>
