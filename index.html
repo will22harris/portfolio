@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Will Harris — Advertising & Sports Media</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
@@ -397,33 +396,80 @@ a { color: inherit; text-decoration: none; }
 }
 .about-copy strong { color: var(--cream); font-weight: 500; }
 
-.tag-grid {
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.affiliations-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 20px;
+}
+
+.logo-wall {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
 }
-.tag {
+.logo-cell {
   background: var(--bg);
-  padding: 24px 20px;
+  aspect-ratio: 3/2;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
   transition: background 0.3s ease;
 }
-.tag:hover { background: var(--bg-elev); }
-.tag-label {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--cream-faint);
+.logo-cell:hover { background: var(--bg-elev); }
+.logo-cell img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(0.85);
+  opacity: 0.75;
+  transition: filter 0.4s ease, opacity 0.4s ease;
 }
-.tag-value {
+.logo-cell:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.now-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.now-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.now-label {
   font-family: var(--display);
-  font-size: 22px;
-  letter-spacing: 0.03em;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.now-value {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--cream-dim);
+}
+.now-value em {
+  font-style: italic;
   color: var(--cream);
 }
 
@@ -432,7 +478,8 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 720px) {
   .about { padding: 0 20px; }
-  .tag-value { font-size: 18px; }
+  .now-row { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+  .now-label { font-size: 16px; }
 }
 
 /* ======================== CONTACT ======================== */
@@ -858,15 +905,36 @@ a { color: inherit; text-decoration: none; }
       <p>My work spans branded content, social media production, conceptual advertising, and photography. Outside the classroom, I serve as <strong>VP &amp; Media Director</strong> of DA&amp;PR, a student-run advertising and PR organization focused on diversity in the industry.</p>
       <p>I'm based in <strong>Austin, TX</strong> — a city I genuinely love and plan to stay rooted in as its sports, media, and advertising ecosystem keeps growing.</p>
     </div>
-    <div class="tag-grid">
-      <div class="tag"><span class="tag-label">Discipline</span><span class="tag-value">Advertising Strategy</span></div>
-      <div class="tag"><span class="tag-label">Discipline</span><span class="tag-value">Sports Media</span></div>
-      <div class="tag"><span class="tag-label">Tool</span><span class="tag-value">Premiere Pro</span></div>
-      <div class="tag"><span class="tag-label">Tool</span><span class="tag-value">Adobe Photoshop</span></div>
-      <div class="tag"><span class="tag-label">Strength</span><span class="tag-value">Branded Content</span></div>
-      <div class="tag"><span class="tag-label">Strength</span><span class="tag-value">Social Production</span></div>
-      <div class="tag"><span class="tag-label">Interest</span><span class="tag-value">Sports Culture</span></div>
-      <div class="tag"><span class="tag-label">Location</span><span class="tag-value">Austin, TX</span></div>
+    <div class="about-side">
+      <div class="affiliations">
+        <div class="affiliations-label">Affiliations &amp; Credits</div>
+        <div class="logo-wall">
+          <div class="logo-cell" title="Moody College of Communication"><img src="images/logo_moody.png" alt="Moody College of Communication"></div>
+          <div class="logo-cell" title="DA&PR"><img src="images/logo_dapr.png" alt="DA&PR"></div>
+          <div class="logo-cell" title="Texas Creative"><img src="images/logo_texascreative.png" alt="Texas Creative"></div>
+          <div class="logo-cell" title="Texas Advertising Group"><img src="images/logo_tag.jpeg" alt="Texas Advertising Group"></div>
+          <div class="logo-cell" title="Sport Management Club at UT"><img src="images/logo_sportsmgmt.png" alt="Sport Management Club at UT"></div>
+          <div class="logo-cell" title="Dumb Love"><img src="images/logo_dumblove.png" alt="Dumb Love"></div>
+        </div>
+      </div>
+      <div class="now-list">
+        <div class="now-row">
+          <span class="now-label">Listening</span>
+          <span class="now-value">Bad Bunny · George Strait · Billy Joel · The Eagles · Daniel Caesar · Stevie Wonder</span>
+        </div>
+        <div class="now-row">
+          <span class="now-label">Watching</span>
+          <span class="now-value">Shrinking · Your Friends and Neighbors · NBA Playoffs</span>
+        </div>
+        <div class="now-row">
+          <span class="now-label">Reading</span>
+          <span class="now-value"><em>No Bullsh*t Strategy</em> · <em>The Catcher in the Rye</em> · Front Office Sports</span>
+        </div>
+        <div class="now-row">
+          <span class="now-label">Best Friend</span>
+          <span class="now-value">Moody · Goldendoodle · named after the Moody College</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
